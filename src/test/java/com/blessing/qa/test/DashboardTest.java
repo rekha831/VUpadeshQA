@@ -32,8 +32,9 @@ public class DashboardTest extends TestBase {
 		String KhetriyaKaryalayListText=spi.kshetriyaKaryalayListMenu();
 		Assert.assertEquals(KhetriyaKaryalayListText, "UPDESH","shuttleHomeText not matching");
 		Reporter.log("KhetriyaKaryalayListText verified succesfully");
+		Reporter.log("KhetriyaKaryalayListText verified succesfully");
 	}
-//checking
+//chec
 	
 
 }
