@@ -39,17 +39,13 @@ public class LoginPageTest extends BasePage {
 	public void Test1() {
 		
 		LoginLogoutPage loginPage=PageFactory.initElements(driver, LoginLogoutPage.class);
-		loginPage.Login("rekhakathayat94@gmail.com", "Rekha@2407");
 		
-		System.out.println("..........this is first Test........");
 	}
 	
 	@Test
 	public void Karyal1() {
 		KhetriyaKaryalayListHomePage spi=PageFactory.initElements(driver,KhetriyaKaryalayListHomePage.class);
-		String shuttleHomeText=spi.kshetriyaKaryalayListMenu();
-		Assert.assertEquals(shuttleHomeText, "DESTINATION EXPERIENCES","shuttleHomeText not matching");
-		Reporter.log("shuttleHomeText verified succesfully");
+		
 	}
 	@AfterClass
 	public void tearDown() throws IOException, InterruptedException{

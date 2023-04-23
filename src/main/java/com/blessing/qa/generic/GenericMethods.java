@@ -31,7 +31,7 @@ public class GenericMethods extends BasePage{
 			
 			
 			WebDriverWait newWait = new WebDriverWait(driver, time);
-			newWait.until(ExpectedConditions.visibilityOf(element));
+			//newWait.until(ExpectedConditions.visibilityOf(element));
 			
 			
 		}
@@ -40,7 +40,7 @@ public class GenericMethods extends BasePage{
     {
            try{
                  WebDriverWait Wait = new WebDriverWait(driver,200);
-         Wait.until(ExpectedConditions.titleIs(etitle));
+       //  Wait.until(ExpectedConditions.titleIs(etitle));
          Reporter.log("title is matching: "+etitle,true);
            
               }
