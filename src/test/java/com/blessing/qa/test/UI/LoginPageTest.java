@@ -45,7 +45,7 @@ public class LoginPageTest extends BasePage {
 	  System.out.println("..........this is first Test for user login........");
 	  }
 	 
-	
+
 	@Test
 	public void Karyal1() {
 		KhetriyaKaryalayListHomePage spi=PageFactory.initElements(driver,KhetriyaKaryalayListHomePage.class);
