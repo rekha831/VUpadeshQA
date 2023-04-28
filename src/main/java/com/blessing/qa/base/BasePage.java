@@ -15,9 +15,6 @@ public class BasePage {
 	public String propertiesPath=System.getProperty("user.dir");
 	public BasePage() throws IOException{
 		prop = new Properties();
-		
-		System.out.println("the path is:"+propertiesPath);
-		
 		FileInputStream file = new FileInputStream(propertiesPath+"/src/main/java/com/qa/blessing/config/configuration.properties");
 	prop.load(file);
 	}
