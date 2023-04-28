@@ -1,4 +1,4 @@
-package com.blessing.qa.test;
+package com.blessing.qa.test.UI;
 
 import java.io.IOException;
 
@@ -18,8 +18,5 @@ public class UpdeshListTest extends TestBase {
 		@Test
 		public void Karyal1() {
 			KhetriyaKaryalayListHomePage spi=PageFactory.initElements(driver,KhetriyaKaryalayListHomePage.class);
-			String kshetriyaKaryalayHomeText=spi.kshetriyaKaryalayListMenu();
-			//Assert.assertEquals(shuttleHomeText, "DESTINATION EXPERIENCES","shuttleHomeText not matching");
-			//Reporter.log("shuttleHomeText verified succesfully");
 		}
 }

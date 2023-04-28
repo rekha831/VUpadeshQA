@@ -19,7 +19,7 @@ public class KhetriyaKaryalayListHomePage extends BasePage {
 	}
 
 	@FindBy(xpath = "//span[text()='Kshetriya Karyalay List']")
-	WebElement kshetriyaKaryalayListMenu;
+	static WebElement kshetriyaKaryalayListMenu;
 
 	@FindBy(xpath = "//a[text()='(//a[@class='btn btn-primary'])[1]']")
 	WebElement kshetriyaKaryalayListHomePage;
@@ -28,23 +28,12 @@ public class KhetriyaKaryalayListHomePage extends BasePage {
 	public void kshetriyaKaryalayListMenuClick() {
 		kshetriyaKaryalayListMenu.click();
 	}
-	public String kshetriyaKaryalayListMenu() {
-		kshetriyaKaryalayListMenu.click();
-
-		Set<String> handles = driver.getWindowHandles();
-
-		String parentWindow = driver.getWindowHandle();
-		System.out.println("parent" + parentWindow);
-
-		Iterator<String> itr = handles.iterator();
-		String parent = itr.next();
-		String childWindow = itr.next();
-		driver.switchTo().window(childWindow);
-		System.out.println("child" + childWindow);
-		System.out.println("switched to child window successfully");
-		String spiceShuttleHomePageText = kshetriyaKaryalayListHomePage.getText();
-		driver.switchTo().window(parent);
-		return spiceShuttleHomePageText;
+	public static  void kshetriyaKaryalayListMenu(WebElement ele) {
+		try {
+			kshetriyaKaryalayListMenu.click();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 }

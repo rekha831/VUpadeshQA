@@ -7,9 +7,9 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-public class ReadExcelTest {
+public class BulkUploadReadExcelTest {
 	public static void main (String [] args) throws IOException{
-		FileInputStream fs = new FileInputStream("D:\\VG Req\\Rquirement_VG.xlsx");
+		FileInputStream fs = new FileInputStream("D:\\ScanPoint\\Rquirement_Bulk.xlsx");
 	    XSSFWorkbook workbook = new XSSFWorkbook(fs);
 		XSSFSheet sheet = workbook.getSheetAt(6);
 		Row row = sheet.getRow(0);
@@ -25,5 +25,6 @@ public class ReadExcelTest {
 		Cell cell3 = row3.getCell(1);
 		System.out.println(sheet.getRow(1).getCell(1));
 		String cellval = cell.getStringCellValue();
-		System.out.println(cellval);
-}}
+		System.out.println(cellval);	
+}
+}
