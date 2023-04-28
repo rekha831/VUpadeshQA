@@ -1,11 +1,11 @@
-package com.blessing.qa.test;
+package com.blessing.qa.test.UI;
 
 import org.testng.annotations.Test;
 
-//import com.blessing.qa.util.RetryAnalyzer;
+import com.blessing.qa.util.RetryAnalyzer;
 
 
-public class RetryTest  {
+public class RetryTestExample  {
 	
 	@Test()
 	public void Test1() {

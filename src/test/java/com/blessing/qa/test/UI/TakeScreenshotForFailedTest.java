@@ -1,4 +1,4 @@
-package com.blessing.qa.test;
+package com.blessing.qa.test.UI;
 import java.io.IOException;
 
 
