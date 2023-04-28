@@ -5,40 +5,44 @@ import java.io.IOException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.Test;
 
 import com.blessing.qa.base.BasePage;
 
 public class LoginLogoutPage extends BasePage {
 
 	
-	@FindBy(name="username")
+	@FindBy(id="user-name")
 	WebElement userid;
 
 	
-	@FindBy(name="password")
+	@FindBy(id="password")
 	WebElement pwd;
 	
-	@FindBy(xpath="//button[@type='submit']")
-	WebElement submitButton;
+	@FindBy(id="login-button")
+	WebElement loginButton;
 	
-	@FindBy(xpath="//a[@class='nav-link dropdown-toggle ms-2']")
-	WebElement logoutBtnMenu;
+	@FindBy(id="react-burger-menu-btn")
+	WebElement megamenubtn;
 	
-	@FindBy(xpath="//a[@class='dropdown-item']")
-	WebElement logoutBtn;
+	
+	@FindBy(id="logout_sidebar_link")
+	WebElement logout;
+	
+	
 	
 	public LoginLogoutPage() throws IOException {
 		PageFactory.initElements(driver, this);
 
 	}
-public void Login(String useridIs,String password) {
-		userid.sendKeys(useridIs);
-		pwd.sendKeys(password);
-		submitButton.click();	
+
+	public void Login(String useridIs,String password) {
+		userid.sendKeys("standard_user");
+		pwd.sendKeys("secret_sauce");
+		loginButton.click();
+		megamenubtn.click();
+		//logout.click();
+		
 	}
-	public void LogOut() throws InterruptedException {
-		Thread.sleep(5000);
-		logoutBtnMenu.click();
-		logoutBtn.click();
-	}
+	
 }

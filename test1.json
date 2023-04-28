@@ -1,0 +1,11 @@
+{
+    "firstname" : "Adarsh",
+    "lastname" : "Kumar",
+    "totalprice" : 1000,
+    "depositpaid" : true,
+    "bookingdates" : {
+        "checkin" : "2021-07-29",
+        "checkout" : "2021-07-30"
+    },
+    "additionalneeds" : "dinner"
+}

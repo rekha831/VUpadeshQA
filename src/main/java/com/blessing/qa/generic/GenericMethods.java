@@ -1,20 +1,17 @@
 package com.blessing.qa.generic;
-	import java.io.IOException;
-	import java.security.SecureRandom;
-	import java.util.Iterator;
-	import java.util.Set;
-
-	import org.openqa.selenium.By;
-	import org.openqa.selenium.WebDriver;
-	import org.openqa.selenium.WebElement;
-	import org.openqa.selenium.interactions.Actions;
-	import org.openqa.selenium.support.ui.ExpectedConditions;
-	import org.openqa.selenium.support.ui.Select;
-	import org.openqa.selenium.support.ui.WebDriverWait;
-	import org.testng.Assert;
-	import org.testng.Reporter;
-
-	import com.blessing.qa.base.BasePage;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.security.SecureRandom;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+import org.testng.Reporter;
+import com.blessing.qa.base.BasePage;
 
 	public class GenericMethods extends BasePage{
 		public static WebDriver driver;
@@ -24,7 +21,7 @@ package com.blessing.qa.generic;
 
 		}
 
-		 public static void WaitForElementPresent1(WebElement element, int time) throws Exception {
+		 public static void WaitForElementPresent(WebElement element, int time) throws Exception {
 
 
 				WebDriverWait newWait = new WebDriverWait(driver, time);
@@ -66,5 +63,17 @@ package com.blessing.qa.generic;
 				sb.append(AB.charAt(rnd.nextInt(AB.length())));
 			return sb.toString();
 		}
+		
+		public static void ReadData() throws IOException{
+			String fileSepr = System.getProperty("file.separator");
+	        String excelFilepath = System.getProperty("user.dir") + fileSepr + "Rquirement_Bulk.xlsx";
+	        System.out.println("excelFilepath" +excelFilepath);
+			FileInputStream fs = new FileInputStream(excelFilepath);
+		    XSSFWorkbook workbook = new XSSFWorkbook(fs);
+			XSSFSheet sheet = workbook.getSheetAt(6);
+			System.out.println(sheet.getRow(1).getCell(0));
+		    System.out.println(sheet.getRow(1).getCell(1));
+			
+	}
 }
 

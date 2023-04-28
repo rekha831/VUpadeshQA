@@ -21,26 +21,20 @@ public class TestBase extends BasePage {
 	@BeforeMethod
 	public void setUp() throws IOException, InterruptedException{
 		String browserName=prop.getProperty("browser");
-	
 		System.out.println("the browser is"+browserName);
 		String url=prop.getProperty("url");
 		initialization(browserName,url);
 		LoginLogoutPage login=PageFactory.initElements(driver, LoginLogoutPage.class);
-		//loglog = new LoGinLogOut();
 		String userid=prop.getProperty("userid");
 		String password=prop.getProperty("pwd");
-		login.Login(userid,password);
-
-		
+		login.Login(userid,password);		
 		Thread.sleep(1000);
-		//("Admin", "admin123");
-		
-		
-	}
+		}
+	
+	
 	@AfterMethod
 	public void tearDown() throws IOException, InterruptedException{
 		LoginLogoutPage login=PageFactory.initElements(driver, LoginLogoutPage.class);
-		login.LogOut();
 		driver.quit();
 	}
 }
