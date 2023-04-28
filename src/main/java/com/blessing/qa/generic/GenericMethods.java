@@ -56,23 +56,7 @@ package com.blessing.qa.generic;
 	    	sel.selectByVisibleText(text);
 	    }
 
-	    public static void clickSample(EnhancedBy by, int index) {
-			EnhancedWebElement element = findElements(by);
-			element.click(index);
-		}
-		public static void hoverBySample(EnhancedBy by) {
-			Actions actions = new Actions(AbstractDriver.getWebDriver());
-			EnhancedWebElement targetElement = findElements(by);
-
-			WebElement webElement = targetElement.get(0);
-			actions.moveToElement(webElement).build().perform();
-
-			Helper.waitForSeconds(0.5);
-		}
-
-		private static EnhancedWebElement findElements(EnhancedBy by) {
-			return null;
-		}
+	    
 
 		public static String generateRandomInteger(int len) {
 			String AB = "0123456789";
